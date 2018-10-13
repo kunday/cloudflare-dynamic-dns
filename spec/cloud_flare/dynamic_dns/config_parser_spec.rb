@@ -1,4 +1,4 @@
-RSpec.describe CloudFlare::Ddns::ConfigParser do
+RSpec.describe CloudFlare::DynamicDNS::ConfigParser do
   let(:parser) { described_class.new(data: data) }
   let(:data) { "email=cloudflare-email\napi_key=cloudflare-global-api-key\nzone=cloudflare-domain\nhostname=full-hostname\n" }
 

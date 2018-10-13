@@ -1,4 +1,4 @@
-RSpec.describe CloudFlare::Ddns::ConfigReader do
+RSpec.describe CloudFlare::DynamicDNS::ConfigReader do
   subject(:config) { described_class.new(path: path) }
 
   let(:path) { '/etc/cloudflare-dynamic-dns.conf' }

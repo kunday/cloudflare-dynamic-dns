@@ -1,5 +1,5 @@
 module CloudFlare
-  module Ddns
+  module DynamicDNS
     class Updater
       def execute
         config = ConfigReader.new.read

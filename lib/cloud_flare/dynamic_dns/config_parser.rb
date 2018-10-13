@@ -1,5 +1,5 @@
 module CloudFlare
-  module Ddns
+  module DynamicDNS
     # reads cloudflare-dynamic-dns config and converts into a Hash object.
     class ConfigParser
       # @param [String] data config file read as is from file system.

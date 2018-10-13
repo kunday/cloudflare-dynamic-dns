@@ -1,7 +1,7 @@
 require 'faraday'
 
 module CloudFlare
-  module Ddns
+  module DynamicDNS
     # Fetch public IP address of the network. use https://ifconfig.so to fetch ip address.
     class IfConfig
       # returns ipv4 address of your home internet connection.
