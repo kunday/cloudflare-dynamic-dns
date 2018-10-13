@@ -1,6 +1,6 @@
 require 'faraday'
 
-module Cloudflare
+module CloudFlare
   module Ddns
     # Fetch public IP address of the network. use https://ifconfig.so to fetch ip address.
     class IfConfig

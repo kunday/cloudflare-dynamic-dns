@@ -1,4 +1,4 @@
-module Cloudflare
+module CloudFlare
   module Ddns
     # reads cloudflare-dynamic-dns config and converts into a Hash object.
     class ConfigParser

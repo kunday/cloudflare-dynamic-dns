@@ -1,11 +1,11 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cloudflare/ddns/version'
+require 'cloud_flare/ddns/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'cloudflare-dynamic-dns'
-  spec.version       = Cloudflare::Ddns::VERSION
+  spec.version       = CloudFlare::Ddns::VERSION
   spec.authors       = ['Arvind Kunday']
   spec.email         = ['arvind@kunday.com']
 

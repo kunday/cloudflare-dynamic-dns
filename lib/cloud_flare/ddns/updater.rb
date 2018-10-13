@@ -1,4 +1,4 @@
-module Cloudflare
+module CloudFlare
   module Ddns
     class Updater
       def execute

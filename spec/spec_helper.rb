@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "cloudflare/ddns"
+require "cloud_flare/ddns"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

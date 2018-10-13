@@ -1,4 +1,4 @@
-module Cloudflare
+module CloudFlare
   module Ddns
     # Read cloudflare-dynamic-dns configuration that will be used for the cloudflare dns update.
     class ConfigReader

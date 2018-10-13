@@ -1,4 +1,4 @@
-RSpec.describe Cloudflare::Ddns::IfConfig do
+RSpec.describe CloudFlare::Ddns::IfConfig do
   subject(:ifconfig) { described_class.new }
 
   describe '#execute' do
