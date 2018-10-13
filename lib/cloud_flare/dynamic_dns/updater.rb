@@ -14,14 +14,18 @@ module CloudFlare
       end
 
       def execute
-        puts "=> #{dns_record.record[:name]} currently pointing to -> #{dns_record.record[:content]}"
-        puts "=> current public IP of your network is #{ip}."
+        current_config
         if changed?
           puts "=> updating #{dns_record.record[:name]} to #{ip}"
           dns_record.update_content(ip)
         else
           puts '=> No changes detected.'
         end
+      end
+
+      def current_config
+        puts "=> #{dns_record.record[:name]} currently pointing to -> #{dns_record.record[:content]}"
+        puts "=> current public IP of your network is #{ip}."
       end
 
       def changed?
