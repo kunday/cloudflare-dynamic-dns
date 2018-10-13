@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path("../../lib", __FILE__)
+require 'cloud_flare/dynamic_dns'
+
+CloudFlare::DynamicDNS::Runner.new.execute
