@@ -1,5 +1,6 @@
 module Cloudflare
   module Ddns
+    # Read ddclient configuration that will be used for the cloudflare dns update.
     class Config
       DEFAULT_CONFIG_PATH = '/etc/ddclient.conf'
 
