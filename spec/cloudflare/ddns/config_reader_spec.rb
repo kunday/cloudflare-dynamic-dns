@@ -7,6 +7,7 @@ RSpec.describe Cloudflare::Ddns::ConfigReader do
     before do
       allow(File).to receive(:read)
     end
+
     it 'reads config from file system' do
       config.read
 

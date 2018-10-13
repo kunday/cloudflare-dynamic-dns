@@ -9,7 +9,7 @@ module Cloudflare
 
       # @return [Hash] k,v of configuration specified in cloudflare-dynamic-dns.conf
       def execute
-        items = data.chomp.split("\n").map { |item| item.split("=") }
+        items = data.chomp.split("\n").map { |item| item.split('=') }
         Hash[*items.flatten]
       end
 
