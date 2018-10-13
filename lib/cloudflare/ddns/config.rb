@@ -1,7 +1,9 @@
 module Cloudflare
   module Ddns
     class Config
-      def initialize(path:)
+      DEFAULT_CONFIG_PATH = '/etc/ddclient.conf'
+
+      def initialize(path: DEFAULT_CONFIG_PATH)
         @path = path
       end
 
