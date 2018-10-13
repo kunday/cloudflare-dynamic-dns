@@ -11,12 +11,12 @@ module Cloudflare
 
       # @return [Array] config as an array object
       def read
-        File.read(path)
+        @config = File.read(path)
       end
 
       private
 
-      attr_reader :path
+      attr_reader :path, :config
     end
   end
 end
