@@ -1,5 +1,5 @@
 require "cloudflare/ddns/version"
-require "cloudflare/ddns/config"
+require "cloudflare/ddns/config_reader"
 require "cloudflare/ddns/if_config"
 
 module Cloudflare

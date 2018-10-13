@@ -3,7 +3,7 @@ RSpec.describe Cloudflare::Ddns::IfConfig do
 
   describe '#execute' do
     before do
-      allow(Faraday).to receive(:get)
+      allow(Faraday).to receive(:get).and_call_original
     end
 
     it 'uses faraday to get public ip' do

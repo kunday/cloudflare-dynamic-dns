@@ -1,7 +1,7 @@
-RSpec.describe Cloudflare::Ddns::Config do
-  subject(:config) { Cloudflare::Ddns::Config.new(path: path) }
+RSpec.describe Cloudflare::Ddns::ConfigReader do
+  subject(:config) { described_class.new(path: path) }
 
-  let(:path) { '/etc/ddclient.conf' }
+  let(:path) { '/etc/cloudflare-dynamic-dns.conf' }
 
   describe '#read' do
     before do
