@@ -3,9 +3,13 @@ require 'cloud_flare/dynamic_dns/updater'
 module CloudFlare
   module DynamicDNS
     class Runner
+      def initialize(path: nil)
+        @path = path
+      end
+
       def execute
-        data = ConfigReader.new.read
-        config = ConfigParser.new(data: data)
+        data = ConfigReader.new(path: path).read
+        config = ConfigParser.new(data: data).execute
 
         ip = IfConfig.new.execute
 
@@ -17,6 +21,10 @@ module CloudFlare
           ip: ip
         ).execute
       end
+
+      private
+
+      attr_reader :path
     end
   end
 end

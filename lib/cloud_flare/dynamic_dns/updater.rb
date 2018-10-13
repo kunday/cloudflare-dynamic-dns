@@ -14,9 +14,9 @@ module CloudFlare
       end
 
       def execute
-        connection = Cloudflare.connect(key: config['key'], email: config['email'])
-        zone = connection.zones.find_by_name(config['zone'])
-        dns_record = zone.dns_records.find_by_name(config['hostname'])
+        connection = Cloudflare.connect(key: key, email: email)
+        dns_zone = connection.zones.find_by_name(zone)
+        dns_record = dns_zone.dns_records.find_by_name(hostname)
         dns_record.update_content(ip)
       end
 
