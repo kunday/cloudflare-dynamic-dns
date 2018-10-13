@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe CloudFlare::DynamicDNS::IfConfig do
   subject(:ifconfig) { described_class.new }
 
@@ -12,5 +14,4 @@ RSpec.describe CloudFlare::DynamicDNS::IfConfig do
       expect(Faraday).to have_received(:get).with('http://ifconfig.so')
     end
   end
-
 end

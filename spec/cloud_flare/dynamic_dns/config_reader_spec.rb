@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe CloudFlare::DynamicDNS::ConfigReader do
   subject(:config) { described_class.new(path: path) }
 

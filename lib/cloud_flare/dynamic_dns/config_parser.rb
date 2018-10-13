@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CloudFlare
   module DynamicDNS
     # reads cloudflare-dynamic-dns config and converts into a Hash object.
@@ -16,7 +18,6 @@ module CloudFlare
       private
 
       attr_reader :data
-
     end
   end
 end
