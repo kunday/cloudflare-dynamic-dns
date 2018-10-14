@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Arvind Kunday']
   spec.email         = ['arvind@kunday.com']
 
-  spec.summary       = 'Use cloudflare as a dynamic DNS provider'
+  spec.summary       = 'Use cloudflare as a dynamic DNS provider.'
   spec.description   = 'Dont rely on shady tools for updating your ip.'
   spec.homepage      = 'https://kunday.com'
   spec.license       = 'MIT'
