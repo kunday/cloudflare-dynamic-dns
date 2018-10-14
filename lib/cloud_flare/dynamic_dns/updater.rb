@@ -23,18 +23,18 @@ module CloudFlare
       def update
         current_config
         if changed?
-          puts "=> updating #{dns_record.record[:name]} to #{ip}"
+          logger.info "=> updating #{dns_record.record[:name]} to #{ip}"
           dns_record.update_content(ip)
         else
-          puts '=> No changes detected.'
+          logger.info '=> No changes detected.'
         end
       end
 
       private
 
       def current_config
-        puts "=> #{dns_record.record[:name]} currently pointing to -> #{dns_record.record[:content]}"
-        puts "=> current public IP of your network is #{ip}."
+        logger.info "=> #{dns_record.record[:name]} currently pointing to -> #{dns_record.record[:content]}"
+        logger.info "=> current public IP of your network is #{ip}."
       end
 
       def changed?
@@ -51,6 +51,10 @@ module CloudFlare
 
       def connection
         @connection ||= Cloudflare.connect(key: key, email: email)
+      end
+
+      def logger
+        Logger.new(STDOUT)
       end
 
       attr_reader :key, :email, :zone, :hostname, :ip
