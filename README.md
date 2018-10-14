@@ -1,28 +1,43 @@
-# Cloudflare::Ddns
+# CloudFlare::DynamicDNS
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cloudflare/ddns`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Use the power of cloudflare to power your dynamic DNS. Don't rely on shady 3rd
+party tools on the internet that charge you money. Cloudflare also provides a
+way to hide your ip from the world along with DDOS protection. Should i say 
+anymore?
 
 ## Installation
 
-Add this line to your application's Gemfile:
+You need a computer inside your network to run this, ideally something small and
+tiny, i use a raspberry pi 3b+ in my network, you can get one for under 40$. In
+Raspbian, you can install `cloudflare-dynamic-dns` by running the following commands:
 
-```ruby
-gem 'cloudflare-dynamic-dns'
+```bash
+sudo apt-get install update
+sudo apt-get install -y ruby
+sudo gem install cloudflare-dynamic-dns
 ```
 
-And then execute:
+You should then be able to invoke `cloudflare-dynamic-dns` in your command line:
 
-    $ bundle
+```bash
+cloudflare-dynamic-dns
+```
 
-Or install it yourself as:
+## Configuration
 
-    $ gem install cloudflare-dynamic-dns
+`cloudflare-dynamic-dns` looks for a file called `/etc/cloudflare-dynamic-dns.conf`.
+This file needs to be readable by the user executing this, else you will need to use
+`sudo cloudflare-dynamic-dns` which is generally not recommended.
 
-## Usage
+Here is a sample configuration of `cloudflare-dynamic-dns`:
+```bash
+email=email-you-registered@with-cloudflare.com
+key=your-api-key
+zone=example.com
+hostname=kickass.example.com
+```
 
-TODO: Write usage instructions here
+and then run `cloudflare-dynamic-dns`. 
 
 ## Development
 
