@@ -32,15 +32,27 @@ RSpec.describe CloudFlare::DynamicDNS::Runner do
     end
 
     it 'parses configuration into a hash' do
+      runner.execute
 
+      expect(config_parser).to have_received(:execute)
     end
 
     it 'fetches current ip up from ifconfig' do
+      runner.execute
 
+      expect(ifconfig).to have_received(:execute)
     end
 
     it 'invokes updater with right config' do
+      runner.execute
 
+      expect(CloudFlare::DynamicDNS::Updater).to have_received(:new).with(
+        key: config['key'],
+        email: config['email'],
+        zone: config['zone'],
+        hostname: config['hostname'],
+        ipv4: ipv4
+      )
     end
   end
 
