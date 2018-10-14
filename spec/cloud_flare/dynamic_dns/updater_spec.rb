@@ -12,8 +12,11 @@ RSpec.describe CloudFlare::DynamicDNS::Updater do
   let(:zone) { instance_double(Cloudflare::Zone) }
   let(:dns_records) { instance_double(Cloudflare::DNSRecords) }
   let(:dns_record) { instance_double(Cloudflare::DNSRecord, record: {content: cloudflare_ipv4}) }
+  let(:logger) { instance_double(Logger) }
 
   before do
+    allow(Logger).to receive(:new).and_return(logger)
+    allow(logger).to receive(:info)
     allow(Cloudflare).to receive(:connect).and_return(connection)
     allow(connection).to receive(:zones).and_return(zones)
     allow(zones).to receive(:find_by_name).and_return(zone)
