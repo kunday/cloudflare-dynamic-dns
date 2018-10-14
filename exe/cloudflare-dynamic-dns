@@ -4,4 +4,4 @@
 $LOAD_PATH << File.expand_path('../lib', __dir__)
 require 'cloud_flare/dynamic_dns'
 
-CloudFlare::DynamicDNS::Runner.new(path: './cloudflare-dynamic-dns.conf').execute
+CloudFlare::DynamicDNS::Runner.new.execute

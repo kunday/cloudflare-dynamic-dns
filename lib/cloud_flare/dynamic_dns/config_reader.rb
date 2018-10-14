@@ -8,7 +8,7 @@ module CloudFlare
 
       # @param [String] path to configuration, defaults to '/etc/cloudflare-dynamic-dns.conf'
       def initialize(path: DEFAULT_CONFIG_PATH)
-        @path = path
+        @path = path || DEFAULT_CONFIG_PATH
       end
 
       # @return [Array] config as an array object
