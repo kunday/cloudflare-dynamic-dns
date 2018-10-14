@@ -1,6 +1,7 @@
 # CloudFlare::DynamicDNS
 
 [![Build Status](https://travis-ci.org/kunday/cloudflare-dynamic-dns.svg?branch=master)](https://travis-ci.org/kunday/cloudflare-dynamic-dns)
+[![Codeclimate Status](https://codeclimate.com/github/kunday/cloudflare-dynamic-dns.png)](https://codeclimate.com/github/kunday/cloudflare-dynamic-dns)
 
 Use the power of cloudflare to power your dynamic DNS. Don't rely on shady 3rd
 party tools on the internet that charge you money. Cloudflare also provides a
