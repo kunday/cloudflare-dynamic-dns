@@ -10,13 +10,13 @@ module CloudFlare
       # @param [String] email
       # @param [String] zone
       # @param [String] hostname
-      # @param [String] ip
-      def initialize(key:, email:, zone:, hostname:, ip:)
+      # @param [String] ipv4
+      def initialize(key:, email:, zone:, hostname:, ipv4:)
         @key = key
         @email = email
         @zone = zone
         @hostname = hostname
-        @ip = ip
+        @ip = ipv4
       end
 
       # Update Cloudflare with the new IP addr

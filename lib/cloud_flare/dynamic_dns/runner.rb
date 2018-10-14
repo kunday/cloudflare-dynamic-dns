@@ -24,7 +24,7 @@ module CloudFlare
           email: config['email'],
           zone: config['zone'],
           hostname: config['hostname'],
-          ip: ip
+          ipv4: ip
         ).execute
       end
 
