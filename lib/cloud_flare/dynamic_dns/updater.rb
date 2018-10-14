@@ -20,7 +20,7 @@ module CloudFlare
       end
 
       # Update Cloudflare with the new IP addr
-      def execute
+      def update
         current_config
         if changed?
           puts "=> updating #{dns_record.record[:name]} to #{ip}"

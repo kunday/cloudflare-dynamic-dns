@@ -25,7 +25,7 @@ module CloudFlare
           zone: config['zone'],
           hostname: config['hostname'],
           ipv4: ip
-        ).execute
+        ).update
       end
 
       private
