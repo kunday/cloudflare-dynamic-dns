@@ -8,6 +8,7 @@ require 'cloud_flare/dynamic_dns/runner'
 require 'cloud_flare/dynamic_dns/updater'
 
 module CloudFlare
+  # Module that updates DNS entries in Cloudflare dynamically.
   module DynamicDNS
     # Your code goes here...
   end
