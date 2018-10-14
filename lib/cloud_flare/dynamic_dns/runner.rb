@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'cloud_flare/dynamic_dns/updater'
 
 module CloudFlare
