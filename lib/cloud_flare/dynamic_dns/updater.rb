@@ -4,7 +4,13 @@ require 'cloudflare'
 
 module CloudFlare
   module DynamicDNS
+    # Update DNS zone / domain information in cloudflare with the new IP address if it has changed.
     class Updater
+      # @param [String] key
+      # @param [String] email
+      # @param [String] zone
+      # @param [String] hostname
+      # @param [String] ip
       def initialize(key:, email:, zone:, hostname:, ip:)
         @key = key
         @email = email
@@ -13,6 +19,7 @@ module CloudFlare
         @ip = ip
       end
 
+      # Update Cloudflare with the new IP addr
       def execute
         current_config
         if changed?
@@ -22,6 +29,8 @@ module CloudFlare
           puts '=> No changes detected.'
         end
       end
+
+      private
 
       def current_config
         puts "=> #{dns_record.record[:name]} currently pointing to -> #{dns_record.record[:content]}"
@@ -43,8 +52,6 @@ module CloudFlare
       def connection
         @connection ||= Cloudflare.connect(key: key, email: email)
       end
-
-      private
 
       attr_reader :key, :email, :zone, :hostname, :ip
     end
