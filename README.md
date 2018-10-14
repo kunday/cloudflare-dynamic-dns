@@ -19,6 +19,14 @@ sudo apt-get install -y ruby
 sudo gem install cloudflare-dynamic-dns
 ```
 
+## Ruby compatibility
+`cloudflare-dynamic-dns` is tested against the following ruby versions:
+```bash
+2.2.9, 2.3.1, 2.3.3, 2.4.3, 2.5.0, 2.5.1
+``` 
+please raise a feature request if you want a different ruby version supported.
+  
+
 You should then be able to invoke `cloudflare-dynamic-dns` in your command line:
 
 ```bash
