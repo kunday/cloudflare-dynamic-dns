@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe CloudFlare::DynamicDNS::Runner do
   subject(:runner) { described_class.new }
   let(:config_reader) { instance_double(CloudFlare::DynamicDNS::ConfigReader) }
@@ -55,5 +57,4 @@ RSpec.describe CloudFlare::DynamicDNS::Runner do
       )
     end
   end
-
 end

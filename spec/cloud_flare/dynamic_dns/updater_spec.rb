@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe CloudFlare::DynamicDNS::Updater do
   subject(:updater) { described_class.new(key: key, email: email, zone: zone, hostname: hostname, ipv4: ipv4) }
 
@@ -11,7 +13,7 @@ RSpec.describe CloudFlare::DynamicDNS::Updater do
   let(:zones) { instance_double(Cloudflare::Zones) }
   let(:zone) { instance_double(Cloudflare::Zone) }
   let(:dns_records) { instance_double(Cloudflare::DNSRecords) }
-  let(:dns_record) { instance_double(Cloudflare::DNSRecord, record: {content: cloudflare_ipv4}) }
+  let(:dns_record) { instance_double(Cloudflare::DNSRecord, record: { content: cloudflare_ipv4 }) }
   let(:logger) { instance_double(Logger) }
 
   before do
