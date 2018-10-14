@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Arvind Kunday']
   spec.email         = ['arvind@kunday.com']
 
-  spec.summary       = 'Update cloudflare dns record, replacement for ddns'
-  spec.description   = 'Kick-ass cloudflare based ddns updater.'
+  spec.summary       = 'Use cloudflare as a dynamic DNS provider'
+  spec.description   = 'Dont rely on shady tools for updating your ip.'
   spec.homepage      = 'https://kunday.com'
   spec.license       = 'MIT'
 
