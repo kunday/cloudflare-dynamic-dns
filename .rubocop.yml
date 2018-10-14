@@ -3,3 +3,6 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   Max: 200
+
+Style/RedundantFreeze:
+  Enabled: false

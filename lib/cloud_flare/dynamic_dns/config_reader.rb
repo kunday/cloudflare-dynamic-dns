@@ -4,7 +4,7 @@ module CloudFlare
   module DynamicDNS
     # Read cloudflare-dynamic-dns configuration that will be used for the cloudflare dns update.
     class ConfigReader
-      DEFAULT_CONFIG_PATH = '/etc/cloudflare-dynamic-dns.conf'
+      DEFAULT_CONFIG_PATH = '/etc/cloudflare-dynamic-dns.conf'.freeze
 
       # @param [String] path to configuration, defaults to '/etc/cloudflare-dynamic-dns.conf'
       def initialize(path: DEFAULT_CONFIG_PATH)

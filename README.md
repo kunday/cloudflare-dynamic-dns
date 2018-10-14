@@ -1,5 +1,7 @@
 # CloudFlare::DynamicDNS
 
+[![Build Status](https://travis-ci.org/kunday/cloudflare-dynamic-dns.svg?branch=master)](https://travis-ci.org/kunday/cloudflare-dynamic-dns)
+
 Use the power of cloudflare to power your dynamic DNS. Don't rely on shady 3rd
 party tools on the internet that charge you money. Cloudflare also provides a
 way to hide your ip from the world along with DDOS protection. Should i say 
@@ -16,6 +18,14 @@ sudo apt-get install update
 sudo apt-get install -y ruby
 sudo gem install cloudflare-dynamic-dns
 ```
+
+## Ruby compatibility
+`cloudflare-dynamic-dns` is tested against the following ruby versions:
+```bash
+2.2.9, 2.3.1, 2.3.3, 2.4.3, 2.5.0, 2.5.1
+``` 
+please raise a feature request if you want a different ruby version supported.
+  
 
 You should then be able to invoke `cloudflare-dynamic-dns` in your command line:
 
