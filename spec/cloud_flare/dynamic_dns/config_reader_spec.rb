@@ -5,11 +5,21 @@ RSpec.describe CloudFlare::DynamicDNS::ConfigReader do
 
   let(:path) { '/etc/cloudflare-dynamic-dns.conf' }
 
-  describe '#read' do
-    before do
-      allow(File).to receive(:read)
-    end
+  before do
+    allow(File).to receive(:read)
+  end
 
+  describe '#new' do
+    let(:path) { nil }
+
+    it 'falls to system path when provided path is nil' do
+      config.read
+
+      expect(File).to have_received(:read).with(CloudFlare::DynamicDNS::ConfigReader::DEFAULT_CONFIG_PATH)
+    end
+  end
+
+  describe '#read' do
     it 'reads config from file system' do
       config.read
 
