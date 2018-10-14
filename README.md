@@ -15,7 +15,7 @@ Raspbian, you can install `cloudflare-dynamic-dns` by running the following comm
 
 ```bash
 sudo apt-get install update
-sudo apt-get install -y ruby
+sudo apt-get install -y ruby ruby-dev
 sudo gem install cloudflare-dynamic-dns
 ```
 
