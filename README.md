@@ -37,7 +37,12 @@ zone=example.com
 hostname=kickass.example.com
 ```
 
-and then run `cloudflare-dynamic-dns`. 
+You can find the API key in cloudflare by going to `My Profile` click the user icon
+and it should be in the bottom of the file titled `Global API Key`. I recommend 
+manually creating a entry in the `dns` section with `127.0.0.1` of your domain before
+running the command.
+
+run `cloudflare-dynamic-dns` and you should see your ip updated. 
 
 ## Development
 
