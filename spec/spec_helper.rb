@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'cloud_flare/dynamic_dns'
 require 'simplecov'
 SimpleCov.start
+require 'cloud_flare/dynamic_dns'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
